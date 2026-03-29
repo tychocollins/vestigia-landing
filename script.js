@@ -34,7 +34,7 @@ function initNavScroll() {
 /* ─── Scroll Reveal (Intersection Observer) ─── */
 function initScrollReveal() {
     const revealElements = document.querySelectorAll(
-        '.platform-card, .capability-card, .arch-card, .section-header, ' +
+        '.platform-card, .capability-card, .arch-card, .team-card, .section-header, ' +
         '.terminal-showcase, .cta-content, .trust-bar'
     );
 
@@ -175,7 +175,7 @@ function initMobileMenu() {
                 top: 72px;
                 left: 0;
                 right: 0;
-                background: rgba(8, 13, 20, 0.98);
+                background: rgba(31, 36, 84, 0.98);
                 border-bottom: 1px solid #1A2332;
                 padding: 20px 24px;
                 gap: 16px;

@@ -13,7 +13,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Vestigia Labs">
-    <meta name="theme-color" content="#080D14">
+    <meta name="theme-color" content="#1F2454">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="trail.png" />
@@ -23,7 +23,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -35,22 +35,12 @@
     <nav id="main-nav" class="nav">
         <div class="nav-inner">
             <a href="#" class="nav-logo" id="nav-logo">
-                <div class="logo-icon">
-                    <svg width="28" height="28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M50 5 L65 35 L95 40 L73 62 L78 92 L50 77 L22 92 L27 62 L5 40 L35 35 Z" 
-                              stroke="#D4A843" stroke-width="3" fill="none" opacity="0.8"/>
-                        <path d="M50 20 L58 38 L78 42 L63 56 L67 76 L50 67 L33 76 L37 56 L22 42 L42 38 Z" 
-                              fill="#D4A843" opacity="0.3"/>
-                        <circle cx="50" cy="47" r="8" fill="#D4A843" opacity="0.9"/>
-                    </svg>
-                </div>
-                <span class="logo-text">VESTIGIA</span>
-                <span class="logo-badge">LABS</span>
+                <img src="LOGOTransparent.png" alt="Vestigia Labs" class="nav-logo-img">
             </a>
             <div class="nav-links" id="nav-links">
                 <a href="#platform" class="nav-link">Platform</a>
                 <a href="#capabilities" class="nav-link">Capabilities</a>
-                <a href="#architecture" class="nav-link">Architecture</a>
+                <a href="#team" class="nav-link">Team</a>
                 <a href="#terminal" class="nav-link">Terminal</a>
             </div>
             <div class="nav-actions">
@@ -78,21 +68,21 @@
             </div>
             
             <h1 class="hero-title" id="hero-title">
-                <span class="hero-line">Detect Financial</span>
-                <span class="hero-line hero-line-gold">Manipulation</span>
-                <span class="hero-line">Before the Market Does</span>
+                <span class="hero-line">Traversing the</span>
+                <span class="hero-line hero-line-gold">Chinese Financial</span>
+                <span class="hero-line">Firewall</span>
             </h1>
             
             <p class="hero-subtitle" id="hero-subtitle">
-                Forensic-grade AI that cross-examines filings in multiple languages, 
-                decomposes earnings quality with Beneish M-Score analysis, and surfaces 
-                hidden risks buried in footnotes — in under 90 seconds.
+                Agentic intelligence to analyze disclosures, synthesize filings, and 
+                deliver trading insights. Forensic-grade AI that cross-examines filings in 
+                multiple languages — in under 90 seconds.
             </p>
             
             <div class="hero-actions" id="hero-actions">
                 <a href="#terminal" class="btn btn-primary btn-lg" id="hero-cta-primary">
                     <span>Launch Terminal</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M5 12h14M12 5l7 7-7 7"/>
                     </svg>
                 </a>
@@ -103,12 +93,12 @@
 
             <div class="hero-metrics" id="hero-metrics">
                 <div class="metric">
-                    <span class="metric-value" data-target="8" id="metric-variables">8</span>
+                    <span class="metric-value" id="metric-variables">8</span>
                     <span class="metric-label">M-Score Variables</span>
                 </div>
                 <div class="metric-divider"></div>
                 <div class="metric">
-                    <span class="metric-value" data-target="10" id="metric-categories">10</span>
+                    <span class="metric-value" id="metric-categories">10</span>
                     <span class="metric-label">Hunt Categories</span>
                 </div>
                 <div class="metric-divider"></div>
@@ -230,7 +220,7 @@
             <div class="platform-grid">
                 <div class="platform-card platform-card-main" id="platform-card-pipeline">
                     <div class="card-icon-lg">
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#D4A843" stroke-width="1.5">
+                        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-gold">
                             <path d="M12 2L2 7l10 5 10-5-10-5z"/>
                             <path d="M2 17l10 5 10-5"/>
                             <path d="M2 12l10 5 10-5"/>
@@ -263,7 +253,7 @@
 
                 <div class="platform-card" id="platform-card-deterministic">
                     <div class="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4A843" stroke-width="1.5">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-gold">
                             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                         </svg>
                     </div>
@@ -273,7 +263,7 @@
 
                 <div class="platform-card" id="platform-card-transparency">
                     <div class="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4A843" stroke-width="1.5">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-gold">
                             <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
                             <circle cx="12" cy="12" r="3"/>
                         </svg>
@@ -284,7 +274,7 @@
 
                 <div class="platform-card" id="platform-card-progressive">
                     <div class="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4A843" stroke-width="1.5">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-gold">
                             <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
                         </svg>
                     </div>
@@ -312,12 +302,9 @@
             </div>
 
             <div class="capabilities-grid">
-                <!-- Beneish M-Score -->
                 <div class="capability-card" id="cap-mscore">
                     <div class="cap-header">
-                        <div class="cap-icon cap-icon-red">
-                            <span>Σ</span>
-                        </div>
+                        <div class="cap-icon cap-icon-red"><span>Σ</span></div>
                         <div class="cap-badge">Quantitative</div>
                     </div>
                     <h3>Beneish M-Score</h3>
@@ -328,28 +315,22 @@
                     </div>
                 </div>
 
-                <!-- Bilingual Asymmetry -->
                 <div class="capability-card" id="cap-asymmetry">
                     <div class="cap-header">
-                        <div class="cap-icon cap-icon-amber">
-                            <span>双</span>
-                        </div>
+                        <div class="cap-icon cap-icon-amber"><span>双</span></div>
                         <div class="cap-badge">Linguistic</div>
                     </div>
                     <h3>Bilingual Asymmetry</h3>
-                    <p>Cross-references EN and ZH filings across 10 hunt categories to detect OMISSION, SOFTENING, NUMERIC, and GOVERNANCE deltas. Surfaces "Ghost Cards" — disclosures present in one language but hidden in translation.</p>
+                    <p>Cross-references EN and ZH filings across 10 hunt categories to detect OMISSION, SOFTENING, NUMERIC, and GOVERNANCE deltas. Surfaces "Ghost Cards" — disclosures hidden in translation.</p>
                     <div class="cap-footer">
                         <code>categories: 10</code>
                         <span class="cap-highlight">EN ↔ ZH</span>
                     </div>
                 </div>
 
-                <!-- Sloan Accruals -->
                 <div class="capability-card" id="cap-sloan">
                     <div class="cap-header">
-                        <div class="cap-icon cap-icon-green">
-                            <span>Δ</span>
-                        </div>
+                        <div class="cap-icon cap-icon-green"><span>Δ</span></div>
                         <div class="cap-badge">Cash Flow</div>
                     </div>
                     <h3>Sloan Accruals Ratio</h3>
@@ -360,12 +341,9 @@
                     </div>
                 </div>
 
-                <!-- Footnote Tracker -->
                 <div class="capability-card" id="cap-footnotes">
                     <div class="cap-header">
-                        <div class="cap-icon cap-icon-blue">
-                            <span>§</span>
-                        </div>
+                        <div class="cap-icon cap-icon-blue"><span>§</span></div>
                         <div class="cap-badge">Textual</div>
                     </div>
                     <h3>Footnote Tracker</h3>
@@ -376,12 +354,9 @@
                     </div>
                 </div>
 
-                <!-- Tick & Tie -->
                 <div class="capability-card" id="cap-ticktie">
                     <div class="cap-header">
-                        <div class="cap-icon cap-icon-purple">
-                            <span>✓</span>
-                        </div>
+                        <div class="cap-icon cap-icon-purple"><span>✓</span></div>
                         <div class="cap-badge">Integrity</div>
                     </div>
                     <h3>Tick & Tie Validation</h3>
@@ -395,52 +370,67 @@
         </div>
     </section>
 
+
     <!-- ═══════════════════════════════════════════ -->
-    <!-- ARCHITECTURE                                -->
+    <!-- TEAM                                        -->
     <!-- ═══════════════════════════════════════════ -->
-    <section id="architecture" class="section">
+    <section id="team" class="section section-alt">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag" id="architecture-tag">Under the Hood</span>
-                <h2 class="section-title" id="architecture-title">
-                    Institutional Architecture
+                <span class="section-tag" id="team-tag">Team</span>
+                <h2 class="section-title" id="team-title">
+                    50+ Years of China<br>Market Experience
                 </h2>
-                <p class="section-subtitle" id="architecture-subtitle">
-                    Built for reliability, auditability, and speed. Every layer is designed 
-                    to meet the standards of institutional due diligence.
+                <p class="section-subtitle" id="team-subtitle">
+                    Institutional-grade forensic intelligence built by a team with decades of 
+                    on-the-ground China operations, cross-border scaling, and AI engineering.
                 </p>
             </div>
 
-            <div class="arch-grid">
-                <div class="arch-card" id="arch-determinism">
-                    <div class="arch-num">01</div>
-                    <h4>Deterministic Inference</h4>
-                    <p>Temperature 0.0 • Seed 42 • JSON response schema. Eliminates stochastic drift across audit runs.</p>
+            <div class="team-grid">
+                <div class="team-card" id="team-mitch">
+                    <div class="team-photo-wrapper">
+                        <img src="mitch.jpg" alt="Mitch Presnick" class="team-photo">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Mitch Presnick</h3>
+                        <span class="team-role">Co-Founder</span>
+                        <ul class="team-credentials">
+                            <li>Founder, Super 8 Hotels China</li>
+                            <li>Harvard Fairbank Center Visiting Fellow '25</li>
+                            <li>30+ years of regulatory and on-the-ground China operations</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="arch-card" id="arch-caching">
-                    <div class="arch-num">02</div>
-                    <h4>Context-Cached Pipeline</h4>
-                    <p>Filing PDFs are cached at the context layer, enabling parallel M-Score, Tick & Tie, and Footnote scans without redundant retrieval.</p>
+
+                <div class="team-card" id="team-daniel">
+                    <div class="team-photo-wrapper">
+                        <img src="dan.jpeg" alt="Daniel Collins" class="team-photo">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Daniel Collins</h3>
+                        <span class="team-role">Co-Founder</span>
+                        <ul class="team-credentials">
+                            <li>Founder, Tyrell Chemical</li>
+                            <li>Founder, Hippogriff Data Systems</li>
+                            <li>Scaling complex cross-border industrial operations</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="arch-card" id="arch-progressive">
-                    <div class="arch-num">03</div>
-                    <h4>Progressive Disclosure</h4>
-                    <p>Results stream to the terminal as each module completes. Attention-routing toasts guide analysts to actionable findings first.</p>
-                </div>
-                <div class="arch-card" id="arch-cost">
-                    <div class="arch-num">04</div>
-                    <h4>Cost Transparency</h4>
-                    <p>Real-time token consumption tracking via the Usage API. Distinguishes cached ($0.20/1M) from fresh ($2.00/1M) input tokens.</p>
-                </div>
-                <div class="arch-card" id="arch-governance">
-                    <div class="arch-num">05</div>
-                    <h4>Governance Validator</h4>
-                    <p>Automatic Big-4 auditor detection for large-cap entities with PCAOB context and non-Big-4 escalation flags.</p>
-                </div>
-                <div class="arch-card" id="arch-deeplink">
-                    <div class="arch-num">06</div>
-                    <h4>Evidence Deep-Linking</h4>
-                    <p>"Take Me There" buttons open source PDFs at the exact page of each finding. Every claim is traceable to raw evidence.</p>
+
+                <div class="team-card" id="team-tycho">
+                    <div class="team-photo-wrapper">
+                        <img src="tycho.jpeg" alt="Tycho Collins" class="team-photo">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Tycho Collins</h3>
+                        <span class="team-role">Co-Founder · Lead Developer</span>
+                        <ul class="team-credentials">
+                            <li>AI/ML Engineer and Lead Developer</li>
+                            <li>Ex-Professional Athlete</li>
+                            <li>Architect of the multi-agent RAG pipeline</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -620,6 +610,9 @@
     <section id="access" class="section section-cta">
         <div class="container">
             <div class="cta-content">
+                <div class="cta-logo">
+                    <img src="LOGOTransparent.png" alt="Vestigia Labs" class="cta-logo-img">
+                </div>
                 <h2 class="cta-title" id="cta-title">Ready to See What Others Miss?</h2>
                 <p class="cta-subtitle" id="cta-subtitle">
                     Request early access to the Vestigia Labs institutional terminal. 
@@ -628,14 +621,14 @@
                 <div class="cta-actions">
                     <a href="mailto:access@vestigialabs.com" class="btn btn-primary btn-lg" id="cta-email-btn">
                         <span>Request Access</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M5 12h14M12 5l7 7-7 7"/>
                         </svg>
                     </a>
                 </div>
                 <div class="cta-note">
                     <span class="cta-note-icon">◆</span>
-                    <span>HKEX coverage • Bilingual EN/ZH • Institutional-grade forensics</span>
+                    <span>HKEX coverage · Bilingual EN/ZH · Institutional-grade forensics</span>
                 </div>
             </div>
         </div>
@@ -649,23 +642,15 @@
             <div class="footer-inner">
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <div class="logo-icon">
-                            <svg width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M50 5 L65 35 L95 40 L73 62 L78 92 L50 77 L22 92 L27 62 L5 40 L35 35 Z" 
-                                      stroke="#D4A843" stroke-width="3" fill="none" opacity="0.8"/>
-                                <circle cx="50" cy="47" r="8" fill="#D4A843" opacity="0.9"/>
-                            </svg>
-                        </div>
-                        <span class="logo-text">VESTIGIA</span>
+                        <img src="LOGOTransparent.png" alt="Vestigia Labs" class="footer-logo-full">
                     </div>
-                    <p class="footer-desc">Institutional intelligence platform for forensic-grade financial analysis.</p>
+                    <p class="footer-desc">Institutional intelligence platform for forensic-grade financial analysis of China and Hong Kong equity markets.</p>
                 </div>
                 <div class="footer-links">
                     <div class="footer-col">
                         <h4>Platform</h4>
                         <a href="#platform">Overview</a>
                         <a href="#capabilities">Capabilities</a>
-                        <a href="#architecture">Architecture</a>
                         <a href="#terminal">Terminal</a>
                     </div>
                     <div class="footer-col">
