@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vestigia Labs — Institutional Intelligence Platform. Forensic-grade financial analysis powered by AI. Detect manipulation before the market does.">
+    <meta name="keywords" content="forensic analysis, financial intelligence, Beneish M-Score, bilingual asymmetry, institutional audit, AI forensics">
+
+    <!-- iOS meta tags & icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Vestigia Labs">
+    <meta name="theme-color" content="#080D14">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="trail.png" />
+
+    <title>Vestigia Labs</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- NAVIGATION                                  -->
+    <!-- ═══════════════════════════════════════════ -->
+    <nav id="main-nav" class="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo" id="nav-logo">
+                <div class="logo-icon">
+                    <svg width="28" height="28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M50 5 L65 35 L95 40 L73 62 L78 92 L50 77 L22 92 L27 62 L5 40 L35 35 Z" 
+                              stroke="#D4A843" stroke-width="3" fill="none" opacity="0.8"/>
+                        <path d="M50 20 L58 38 L78 42 L63 56 L67 76 L50 67 L33 76 L37 56 L22 42 L42 38 Z" 
+                              fill="#D4A843" opacity="0.3"/>
+                        <circle cx="50" cy="47" r="8" fill="#D4A843" opacity="0.9"/>
+                    </svg>
+                </div>
+                <span class="logo-text">VESTIGIA</span>
+                <span class="logo-badge">LABS</span>
+            </a>
+            <div class="nav-links" id="nav-links">
+                <a href="#platform" class="nav-link">Platform</a>
+                <a href="#capabilities" class="nav-link">Capabilities</a>
+                <a href="#architecture" class="nav-link">Architecture</a>
+                <a href="#terminal" class="nav-link">Terminal</a>
+            </div>
+            <div class="nav-actions">
+                <a href="#terminal" class="btn btn-ghost" id="nav-demo-btn">View Demo</a>
+                <a href="#access" class="btn btn-primary" id="nav-access-btn">Request Access</a>
+            </div>
+            <button class="nav-mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- HERO SECTION                                -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section id="hero" class="hero">
+        <div class="hero-grid-bg"></div>
+        <div class="hero-radial"></div>
+        <div class="hero-particles" id="hero-particles"></div>
+        
+        <div class="hero-content">
+            <div class="hero-badge" id="hero-badge">
+                <span class="badge-dot"></span>
+                <span>Institutional Intelligence Platform</span>
+            </div>
+            
+            <h1 class="hero-title" id="hero-title">
+                <span class="hero-line">Detect Financial</span>
+                <span class="hero-line hero-line-gold">Manipulation</span>
+                <span class="hero-line">Before the Market Does</span>
+            </h1>
+            
+            <p class="hero-subtitle" id="hero-subtitle">
+                Forensic-grade AI that cross-examines filings in multiple languages, 
+                decomposes earnings quality with Beneish M-Score analysis, and surfaces 
+                hidden risks buried in footnotes — in under 90 seconds.
+            </p>
+            
+            <div class="hero-actions" id="hero-actions">
+                <a href="#terminal" class="btn btn-primary btn-lg" id="hero-cta-primary">
+                    <span>Launch Terminal</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="#capabilities" class="btn btn-outline btn-lg" id="hero-cta-secondary">
+                    <span>Explore Capabilities</span>
+                </a>
+            </div>
+
+            <div class="hero-metrics" id="hero-metrics">
+                <div class="metric">
+                    <span class="metric-value" data-target="8" id="metric-variables">8</span>
+                    <span class="metric-label">M-Score Variables</span>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric">
+                    <span class="metric-value" data-target="10" id="metric-categories">10</span>
+                    <span class="metric-label">Hunt Categories</span>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric">
+                    <span class="metric-value" id="metric-latency">&lt;90s</span>
+                    <span class="metric-label">Audit Latency</span>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric">
+                    <span class="metric-value" id="metric-languages">2</span>
+                    <span class="metric-label">Filing Languages</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-terminal-preview" id="hero-terminal-preview">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span class="dot dot-red"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                    </div>
+                    <span class="terminal-title">vestigia — forensic audit</span>
+                </div>
+                <div class="terminal-body" id="terminal-body">
+                    <div class="terminal-line">
+                        <span class="t-prompt">▸</span>
+                        <span class="t-cmd">audit</span>
+                        <span class="t-arg">--ticker 3333.HK</span>
+                        <span class="t-flag">--deep-scan</span>
+                    </div>
+                    <div class="terminal-line t-fade-1">
+                        <span class="t-system">⚡</span>
+                        <span class="t-info">Initializing forensic pipeline...</span>
+                    </div>
+                    <div class="terminal-line t-fade-2">
+                        <span class="t-system">◆</span>
+                        <span class="t-info">Retrieving EN + ZH filings from HKEX...</span>
+                    </div>
+                    <div class="terminal-line t-fade-3">
+                        <span class="t-system">◆</span>
+                        <span class="t-info">Running Beneish M-Score decomposition...</span>
+                    </div>
+                    <div class="terminal-line t-fade-4">
+                        <span class="t-warn">▲</span>
+                        <span class="t-warning">M-Score: -1.78 — ABOVE threshold (-1.78)</span>
+                    </div>
+                    <div class="terminal-line t-fade-5">
+                        <span class="t-system">◆</span>
+                        <span class="t-info">Bilingual asymmetry scan: 10 categories...</span>
+                    </div>
+                    <div class="terminal-line t-fade-6">
+                        <span class="t-alert">✖</span>
+                        <span class="t-danger">ALPHA FINDING: Share Pledging (股份质押) omitted from EN filing</span>
+                    </div>
+                    <div class="terminal-line t-fade-7">
+                        <span class="t-system">◆</span>
+                        <span class="t-info">Footnote tracker: 3 policy changes detected...</span>
+                    </div>
+                    <div class="terminal-line t-fade-8">
+                        <span class="t-gold">★</span>
+                        <span class="t-verdict">VERDICT: HIGH RISK — 4 forensic flags raised</span>
+                    </div>
+                    <div class="terminal-cursor"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- TRUST BAR                                   -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="trust-bar" id="trust-bar">
+        <div class="container">
+            <p class="trust-label">Built on established forensic methodologies</p>
+            <div class="trust-items">
+                <div class="trust-item">
+                    <span class="trust-icon">Σ</span>
+                    <span>Beneish M-Score</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">Δ</span>
+                    <span>Sloan Accruals</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">双</span>
+                    <span>Bilingual Analysis</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">✓</span>
+                    <span>Tick & Tie</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">§</span>
+                    <span>PCAOB Standards</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- PLATFORM OVERVIEW                           -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section id="platform" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" id="platform-tag">The Platform</span>
+                <h2 class="section-title" id="platform-title">
+                    Institutional-Grade<br>Forensic Intelligence
+                </h2>
+                <p class="section-subtitle" id="platform-subtitle">
+                    A deterministic, single-pass audit pipeline that transforms raw financial filings 
+                    into actionable forensic intelligence. Every finding is grounded in evidence, 
+                    every calculation is transparent.
+                </p>
+            </div>
+
+            <div class="platform-grid">
+                <div class="platform-card platform-card-main" id="platform-card-pipeline">
+                    <div class="card-icon-lg">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#D4A843" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>4-Phase Forensic Pipeline</h3>
+                    <p>Sequential milestone architecture ensures complete analytical coverage. From filing retrieval through bilingual validation, integrity checks, and final certification — each phase completes deterministically.</p>
+                    <div class="pipeline-phases">
+                        <div class="phase">
+                            <span class="phase-num">01</span>
+                            <span class="phase-name">Sprint Extraction</span>
+                        </div>
+                        <div class="phase-arrow">→</div>
+                        <div class="phase">
+                            <span class="phase-num">02</span>
+                            <span class="phase-name">Bilingual Validation</span>
+                        </div>
+                        <div class="phase-arrow">→</div>
+                        <div class="phase">
+                            <span class="phase-num">03</span>
+                            <span class="phase-name">Integrity Checks</span>
+                        </div>
+                        <div class="phase-arrow">→</div>
+                        <div class="phase">
+                            <span class="phase-num">04</span>
+                            <span class="phase-name">Certification</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="platform-card" id="platform-card-deterministic">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4A843" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3>Deterministic Outputs</h3>
+                    <p>Temperature-zero inference with fixed seeds ensures identical results across runs. No stochastic variance — just reliable, reproducible forensic analysis.</p>
+                </div>
+
+                <div class="platform-card" id="platform-card-transparency">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4A843" stroke-width="1.5">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                            <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                    </div>
+                    <h3>Full Transparency</h3>
+                    <p>"Show the Math" accordions expose every variable, every coefficient, every calculation. Analysts see the raw arithmetic behind every risk flag.</p>
+                </div>
+
+                <div class="platform-card" id="platform-card-progressive">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4A843" stroke-width="1.5">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                        </svg>
+                    </div>
+                    <h3>Progressive Loading</h3>
+                    <p>Results stream in real-time as each pipeline phase completes. Analysts begin triage immediately — no waiting for full audit completion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- CAPABILITIES                                -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section id="capabilities" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" id="capabilities-tag">Core Engines</span>
+                <h2 class="section-title" id="capabilities-title">
+                    Five Forensic Modules,<br>One Verdict
+                </h2>
+                <p class="section-subtitle" id="capabilities-subtitle">
+                    Each module runs specialized analysis independently, then converges 
+                    into a unified risk assessment with institutional-grade citations.
+                </p>
+            </div>
+
+            <div class="capabilities-grid">
+                <!-- Beneish M-Score -->
+                <div class="capability-card" id="cap-mscore">
+                    <div class="cap-header">
+                        <div class="cap-icon cap-icon-red">
+                            <span>Σ</span>
+                        </div>
+                        <div class="cap-badge">Quantitative</div>
+                    </div>
+                    <h3>Beneish M-Score</h3>
+                    <p>8-variable earnings manipulation detector using DSRI, GMI, AQI, SGI, DEPI, SGAI, LVGI, and TATA indices. Calibrated against the -1.78 institutional threshold with full variable-level decomposition.</p>
+                    <div class="cap-footer">
+                        <code>intercept: -4.84</code>
+                        <span class="cap-highlight">8 variables</span>
+                    </div>
+                </div>
+
+                <!-- Bilingual Asymmetry -->
+                <div class="capability-card" id="cap-asymmetry">
+                    <div class="cap-header">
+                        <div class="cap-icon cap-icon-amber">
+                            <span>双</span>
+                        </div>
+                        <div class="cap-badge">Linguistic</div>
+                    </div>
+                    <h3>Bilingual Asymmetry</h3>
+                    <p>Cross-references EN and ZH filings across 10 hunt categories to detect OMISSION, SOFTENING, NUMERIC, and GOVERNANCE deltas. Surfaces "Ghost Cards" — disclosures present in one language but hidden in translation.</p>
+                    <div class="cap-footer">
+                        <code>categories: 10</code>
+                        <span class="cap-highlight">EN ↔ ZH</span>
+                    </div>
+                </div>
+
+                <!-- Sloan Accruals -->
+                <div class="capability-card" id="cap-sloan">
+                    <div class="cap-header">
+                        <div class="cap-icon cap-icon-green">
+                            <span>Δ</span>
+                        </div>
+                        <div class="cap-badge">Cash Flow</div>
+                    </div>
+                    <h3>Sloan Accruals Ratio</h3>
+                    <p>Measures the gap between reported earnings and operating cash flows. A semicircular gauge visualizes the safety range (±10%), instantly flagging entities with aggressive accrual-based earnings.</p>
+                    <div class="cap-footer">
+                        <code>safety: ±10%</code>
+                        <span class="cap-highlight">Gauge viz</span>
+                    </div>
+                </div>
+
+                <!-- Footnote Tracker -->
+                <div class="capability-card" id="cap-footnotes">
+                    <div class="cap-header">
+                        <div class="cap-icon cap-icon-blue">
+                            <span>§</span>
+                        </div>
+                        <div class="cap-badge">Textual</div>
+                    </div>
+                    <h3>Footnote Tracker</h3>
+                    <p>Scans for inventory build-up signals, depreciation policy changes, and marketing-to-revenue efficiency anomalies. Each finding is tagged with severity and deep-linked to the source PDF page.</p>
+                    <div class="cap-footer">
+                        <code>severity: H/M/L</code>
+                        <span class="cap-highlight">PDF links</span>
+                    </div>
+                </div>
+
+                <!-- Tick & Tie -->
+                <div class="capability-card" id="cap-ticktie">
+                    <div class="cap-header">
+                        <div class="cap-icon cap-icon-purple">
+                            <span>✓</span>
+                        </div>
+                        <div class="cap-badge">Integrity</div>
+                    </div>
+                    <h3>Tick & Tie Validation</h3>
+                    <p>Cross-references numerical claims across multiple filing sections for internal consistency. Detects discrepancies between reported figures and supporting schedules with reconciliation precision.</p>
+                    <div class="cap-footer">
+                        <code>cross-ref: multi</code>
+                        <span class="cap-highlight">Reconcile</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- ARCHITECTURE                                -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section id="architecture" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" id="architecture-tag">Under the Hood</span>
+                <h2 class="section-title" id="architecture-title">
+                    Institutional Architecture
+                </h2>
+                <p class="section-subtitle" id="architecture-subtitle">
+                    Built for reliability, auditability, and speed. Every layer is designed 
+                    to meet the standards of institutional due diligence.
+                </p>
+            </div>
+
+            <div class="arch-grid">
+                <div class="arch-card" id="arch-determinism">
+                    <div class="arch-num">01</div>
+                    <h4>Deterministic Inference</h4>
+                    <p>Temperature 0.0 • Seed 42 • JSON response schema. Eliminates stochastic drift across audit runs.</p>
+                </div>
+                <div class="arch-card" id="arch-caching">
+                    <div class="arch-num">02</div>
+                    <h4>Context-Cached Pipeline</h4>
+                    <p>Filing PDFs are cached at the context layer, enabling parallel M-Score, Tick & Tie, and Footnote scans without redundant retrieval.</p>
+                </div>
+                <div class="arch-card" id="arch-progressive">
+                    <div class="arch-num">03</div>
+                    <h4>Progressive Disclosure</h4>
+                    <p>Results stream to the terminal as each module completes. Attention-routing toasts guide analysts to actionable findings first.</p>
+                </div>
+                <div class="arch-card" id="arch-cost">
+                    <div class="arch-num">04</div>
+                    <h4>Cost Transparency</h4>
+                    <p>Real-time token consumption tracking via the Usage API. Distinguishes cached ($0.20/1M) from fresh ($2.00/1M) input tokens.</p>
+                </div>
+                <div class="arch-card" id="arch-governance">
+                    <div class="arch-num">05</div>
+                    <h4>Governance Validator</h4>
+                    <p>Automatic Big-4 auditor detection for large-cap entities with PCAOB context and non-Big-4 escalation flags.</p>
+                </div>
+                <div class="arch-card" id="arch-deeplink">
+                    <div class="arch-num">06</div>
+                    <h4>Evidence Deep-Linking</h4>
+                    <p>"Take Me There" buttons open source PDFs at the exact page of each finding. Every claim is traceable to raw evidence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- TERMINAL DEMO                               -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section id="terminal" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" id="terminal-tag">Live Interface</span>
+                <h2 class="section-title" id="terminal-title">
+                    The Forensic Terminal
+                </h2>
+                <p class="section-subtitle" id="terminal-subtitle">
+                    A modular 5-tab evidence panel designed for institutional analysts. 
+                    High-density typography, severity filtering, and real-time progressive loading.
+                </p>
+            </div>
+
+            <div class="terminal-showcase" id="terminal-showcase">
+                <div class="showcase-tabs">
+                    <button class="showcase-tab active" data-tab="summary" id="tab-summary">
+                        <span class="tab-icon">◉</span> Summary
+                    </button>
+                    <button class="showcase-tab" data-tab="forensic" id="tab-forensic">
+                        <span class="tab-icon">Σ</span> Forensic Risk
+                    </button>
+                    <button class="showcase-tab" data-tab="asymmetry" id="tab-asymmetry">
+                        <span class="tab-icon">双</span> Asymmetry
+                    </button>
+                    <button class="showcase-tab" data-tab="integrity" id="tab-integrity">
+                        <span class="tab-icon">✓</span> Integrity
+                    </button>
+                    <button class="showcase-tab" data-tab="footnotes" id="tab-footnotes">
+                        <span class="tab-icon">§</span> Footnotes
+                    </button>
+                </div>
+
+                <div class="showcase-content">
+                    <div class="showcase-panel active" id="panel-summary">
+                        <div class="panel-verdict">
+                            <div class="verdict-badge verdict-high">HIGH RISK</div>
+                            <div class="verdict-ticker">3333.HK — China Evergrande Group</div>
+                        </div>
+                        <div class="panel-body">
+                            <p class="panel-text">The forensic audit of China Evergrande Group (3333.HK) reveals <strong>significant manipulation indicators</strong> across multiple analytical dimensions. The Beneish M-Score exceeds the institutional threshold, bilingual filing analysis has surfaced critical omissions in the English translation, and footnote tracking has identified undisclosed policy changes.</p>
+                            <div class="panel-citations">
+                                <span class="citation">Annual Report 2020 p.142</span>
+                                <span class="citation">Interim Report 2021 p.87</span>
+                                <span class="citation">ZH Filing §4.3.2</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="showcase-panel" id="panel-forensic">
+                        <div class="panel-mscore">
+                            <div class="mscore-header">
+                                <span class="mscore-label">Beneish M-Score</span>
+                                <span class="mscore-value mscore-danger">-1.78</span>
+                            </div>
+                            <div class="mscore-bar">
+                                <div class="mscore-track">
+                                    <div class="mscore-fill" style="width: 72%;"></div>
+                                    <div class="mscore-threshold"></div>
+                                </div>
+                                <div class="mscore-labels">
+                                    <span>-3.0 Safe</span>
+                                    <span class="mscore-thresh-label">-1.78 Threshold</span>
+                                    <span>0.0 Danger</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-variables">
+                            <div class="variable"><span class="var-name">DSRI</span><span class="var-val var-danger">1.42</span></div>
+                            <div class="variable"><span class="var-name">GMI</span><span class="var-val var-warn">1.18</span></div>
+                            <div class="variable"><span class="var-name">AQI</span><span class="var-val var-danger">1.67</span></div>
+                            <div class="variable"><span class="var-name">SGI</span><span class="var-val var-safe">0.94</span></div>
+                            <div class="variable"><span class="var-name">DEPI</span><span class="var-val var-warn">1.21</span></div>
+                            <div class="variable"><span class="var-name">SGAI</span><span class="var-val var-safe">0.88</span></div>
+                            <div class="variable"><span class="var-name">LVGI</span><span class="var-val var-danger">1.55</span></div>
+                            <div class="variable"><span class="var-name">TATA</span><span class="var-val var-warn">0.12</span></div>
+                        </div>
+                    </div>
+
+                    <div class="showcase-panel" id="panel-asymmetry">
+                        <div class="ghost-card">
+                            <div class="ghost-header">
+                                <span class="ghost-badge">OMISSION</span>
+                                <span class="ghost-severity ghost-high">HIGH</span>
+                            </div>
+                            <div class="ghost-body">
+                                <div class="ghost-lang">
+                                    <span class="ghost-label">ZH (Found)</span>
+                                    <p>截至二零二零年十二月三十一日，本集团主要股东已将持有的<strong>约23.4%股份</strong>进行质押融资。</p>
+                                </div>
+                                <div class="ghost-divider">
+                                    <span class="ghost-arrow">⇢</span>
+                                </div>
+                                <div class="ghost-lang ghost-missing">
+                                    <span class="ghost-label">EN (Missing)</span>
+                                    <p class="ghost-absent">No corresponding disclosure found in English filing.</p>
+                                </div>
+                            </div>
+                            <div class="ghost-tag">Share Pledging (股份质押) — Alpha Finding</div>
+                        </div>
+                    </div>
+
+                    <div class="showcase-panel" id="panel-integrity">
+                        <div class="integrity-rows">
+                            <div class="integrity-row">
+                                <span class="int-label">Revenue (p.42)</span>
+                                <span class="int-val">¥507.2B</span>
+                                <span class="int-check int-match">✓ Match</span>
+                                <span class="int-ref">vs. Note 5 (p.198)</span>
+                            </div>
+                            <div class="integrity-row">
+                                <span class="int-label">Total Debt (p.58)</span>
+                                <span class="int-val">¥835.5B</span>
+                                <span class="int-check int-mismatch">✖ Δ2.1B</span>
+                                <span class="int-ref">vs. Schedule III (p.215)</span>
+                            </div>
+                            <div class="integrity-row">
+                                <span class="int-label">Net Assets (p.44)</span>
+                                <span class="int-val">¥352.8B</span>
+                                <span class="int-check int-match">✓ Match</span>
+                                <span class="int-ref">vs. SOCE (p.46)</span>
+                            </div>
+                            <div class="integrity-row">
+                                <span class="int-label">Op. Cash Flow (p.48)</span>
+                                <span class="int-val">¥-61.3B</span>
+                                <span class="int-check int-match">✓ Match</span>
+                                <span class="int-ref">vs. CF Statement</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="showcase-panel" id="panel-footnotes">
+                        <div class="footnote-filters">
+                            <button class="filter-pill active" id="filter-all">ALL</button>
+                            <button class="filter-pill filter-high" id="filter-high">HIGH</button>
+                            <button class="filter-pill filter-med" id="filter-medium">MEDIUM</button>
+                            <button class="filter-pill filter-low" id="filter-low">LOW</button>
+                        </div>
+                        <div class="footnote-list">
+                            <div class="footnote-item">
+                                <span class="fn-severity fn-high">HIGH</span>
+                                <span class="fn-text">Depreciation policy changed from straight-line to reducing balance in FY2020 — impact ¥8.2B</span>
+                                <span class="fn-link">p.203 →</span>
+                            </div>
+                            <div class="footnote-item">
+                                <span class="fn-severity fn-high">HIGH</span>
+                                <span class="fn-text">Inventory write-down of ¥14.7B not reflected in headline earnings</span>
+                                <span class="fn-link">p.187 →</span>
+                            </div>
+                            <div class="footnote-item">
+                                <span class="fn-severity fn-med">MED</span>
+                                <span class="fn-text">Related party transaction volume increased 340% YoY (Note 38)</span>
+                                <span class="fn-link">p.221 →</span>
+                            </div>
+                            <div class="footnote-item">
+                                <span class="fn-severity fn-low">LOW</span>
+                                <span class="fn-text">Marketing-to-revenue ratio declined from 4.2% to 2.8%</span>
+                                <span class="fn-link">p.156 →</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- CTA / ACCESS                                -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section id="access" class="section section-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title" id="cta-title">Ready to See What Others Miss?</h2>
+                <p class="cta-subtitle" id="cta-subtitle">
+                    Request early access to the Vestigia Labs institutional terminal. 
+                    Currently supporting HKEX-listed entities with bilingual EN/ZH coverage.
+                </p>
+                <div class="cta-actions">
+                    <a href="mailto:access@vestigialabs.com" class="btn btn-primary btn-lg" id="cta-email-btn">
+                        <span>Request Access</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="cta-note">
+                    <span class="cta-note-icon">◆</span>
+                    <span>HKEX coverage • Bilingual EN/ZH • Institutional-grade forensics</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- FOOTER                                      -->
+    <!-- ═══════════════════════════════════════════ -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <svg width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M50 5 L65 35 L95 40 L73 62 L78 92 L50 77 L22 92 L27 62 L5 40 L35 35 Z" 
+                                      stroke="#D4A843" stroke-width="3" fill="none" opacity="0.8"/>
+                                <circle cx="50" cy="47" r="8" fill="#D4A843" opacity="0.9"/>
+                            </svg>
+                        </div>
+                        <span class="logo-text">VESTIGIA</span>
+                    </div>
+                    <p class="footer-desc">Institutional intelligence platform for forensic-grade financial analysis.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Platform</h4>
+                        <a href="#platform">Overview</a>
+                        <a href="#capabilities">Capabilities</a>
+                        <a href="#architecture">Architecture</a>
+                        <a href="#terminal">Terminal</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Resources</h4>
+                        <a href="#">Documentation</a>
+                        <a href="#">API Reference</a>
+                        <a href="#">Methodology</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Vestigia Labs. All rights reserved.</p>
+                <p class="footer-tagline">vestigia (n.) — traces, footprints, vestiges of what was hidden.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
