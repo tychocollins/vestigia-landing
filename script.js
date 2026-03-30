@@ -35,7 +35,7 @@ function initNavScroll() {
 function initScrollReveal() {
     const revealElements = document.querySelectorAll(
         '.platform-card, .capability-card, .arch-card, .team-card, .section-header, ' +
-        '.terminal-showcase, .cta-content, .trust-bar'
+        '.terminal-showcase, .cta-content, .exc-card'
     );
 
     revealElements.forEach(el => el.classList.add('reveal'));
@@ -45,7 +45,7 @@ function initScrollReveal() {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     // Stagger children
-                    const parent = entry.target.closest('.platform-grid, .capabilities-grid, .arch-grid');
+        const parent = entry.target.closest('.platform-grid, .capabilities-grid, .capabilities-grid-2, .arch-grid');
                     if (parent) {
                         const siblings = Array.from(parent.querySelectorAll('.reveal'));
                         const index = siblings.indexOf(entry.target);
