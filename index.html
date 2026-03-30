@@ -56,96 +56,134 @@
 
     <!-- ═══════════════════════════════════════════ -->
     <!-- HERO SECTION                                -->
-    <!-- ═══════════════════════════════════════════ -->
     <section id="hero" class="hero">
         <div class="hero-grid-bg"></div>
         <div class="hero-radial"></div>
         <div class="hero-particles" id="hero-particles"></div>
         
-        <div class="hero-content">
-            <div class="hero-badge" id="hero-badge">
-                <span class="badge-dot"></span>
-                <span>Institutional Intelligence Platform</span>
-            </div>
-            
-            <h1 class="hero-title" id="hero-title">
-                <span class="hero-line">Agentic AI for</span>
-                <span class="hero-line hero-line-gold">Chinese Financial</span>
-                <span class="hero-line">Forensics</span>
-            </h1>
-            
-            <p class="hero-subtitle" id="hero-subtitle">
-                Uncover hidden liabilities, mistranslations, and accounting anomalies 
-                in Chinese equities. Deterministic, institutional-grade analysis.
-            </p>
-            
-            <div class="hero-actions" id="hero-actions">
-                <a href="#analysis" class="btn btn-primary btn-lg" id="hero-cta-primary">
-                    <span>Launch Terminal</span>
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
-                    </svg>
-                </a>
-                <a href="#capabilities" class="btn btn-outline btn-lg" id="hero-cta-secondary">
-                    <span>Explore Capabilities</span>
-                </a>
-            </div>
-        </div>
-
-        <div class="hero-terminal-preview" id="hero-terminal-preview">
-            <div class="terminal-window">
-                <div class="terminal-header">
-                    <div class="terminal-dots">
-                        <span class="dot dot-red"></span>
-                        <span class="dot dot-yellow"></span>
-                        <span class="dot dot-green"></span>
-                    </div>
-                    <span class="terminal-title">vestigia — forensic audit</span>
+        <div class="hero-two-col">
+            <!-- LEFT: Copy -->
+            <div class="hero-content" id="hero-content-left">
+                <div class="hero-badge" id="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span>Institutional Intelligence Platform</span>
                 </div>
-                <div class="terminal-body" id="terminal-body">
-                    <div class="terminal-line">
-                        <span class="t-prompt">▸</span>
-                        <span class="t-cmd">audit</span>
-                        <span class="t-arg">--ticker 2007.HK</span>
-                        <span class="t-flag">--deep-scan</span>
+                
+                <h1 class="hero-title" id="hero-title">
+                    <span class="hero-line">Agentic AI for</span>
+                    <span class="hero-line hero-line-gold">Chinese Financial</span>
+                    <span class="hero-line">Forensics</span>
+                </h1>
+                
+                <p class="hero-subtitle" id="hero-subtitle">
+                    Uncover hidden liabilities, mistranslations, and accounting anomalies 
+                    in Chinese equities. Deterministic, institutional-grade analysis.
+                </p>
+                
+                <div class="hero-actions" id="hero-actions">
+                    <a href="#analysis" class="btn btn-primary btn-lg" id="hero-cta-primary">
+                        <span>Launch Terminal</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="#capabilities" class="btn btn-outline btn-lg" id="hero-cta-secondary">
+                        <span>Explore Capabilities</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- RIGHT: Document Scan Visualization -->
+            <div class="hero-workflow" id="hero-terminal-preview">
+                <div class="workflow-panel">
+                    <div class="workflow-panel-header">
+                        <span class="workflow-label-side">FORENSIC ENGINE</span>
+                        <span class="workflow-title-center">LIVE ASYMMETRY ANALYSIS</span>
+                        <span class="workflow-label-side">2007.HK · FY2022</span>
                     </div>
-                    <div class="terminal-line t-fade-1">
-                        <span class="t-system">⚡</span>
-                        <span class="t-info">Initializing forensic pipeline...</span>
+
+                    <div class="scan-document" id="scan-doc">
+
+                        <!-- Document title block -->
+                        <div class="doc-title-row">
+                            <span class="doc-company">Country Garden Holdings Co., Ltd.</span>
+                            <span class="doc-page-ref">Annual Report FY2022</span>
+                        </div>
+
+                        <!-- Normal rows -->
+                        <div class="doc-data-row">
+                            <div class="doc-line-placeholder" style="width:60%;"></div>
+                            <span class="doc-figure">RMB 89,420M</span>
+                        </div>
+                        <div class="doc-data-row">
+                            <div class="doc-line-placeholder" style="width:72%;"></div>
+                            <span class="doc-figure">RMB 147,550M</span>
+                        </div>
+                        <div class="doc-data-row">
+                            <div class="doc-line-placeholder" style="width:50%;"></div>
+                            <span class="doc-figure">RMB 6,052M</span>
+                        </div>
+
+                        <!-- FLAGGED: Going Concern — RED -->
+                        <div class="doc-data-row doc-flagged doc-flagged-red">
+                            <span class="doc-flag-text">⚠ Going Concern Disclosure</span>
+                            <span class="doc-flag-badge badge-danger">RED FLAG · p.137</span>
+                        </div>
+
+                        <!-- Normal rows -->
+                        <div class="doc-data-row">
+                            <div class="doc-line-placeholder" style="width:65%;"></div>
+                            <span class="doc-figure">RMB 23,000M</span>
+                        </div>
+                        <div class="doc-data-row">
+                            <div class="doc-line-placeholder" style="width:48%;"></div>
+                            <span class="doc-figure">HKD 5,055M</span>
+                        </div>
+
+                        <!-- FLAGGED: DSRI Anomaly — YELLOW -->
+                        <div class="doc-data-row doc-flagged doc-flagged-warn">
+                            <span class="doc-flag-text">▲ DSRI Anomaly Detected</span>
+                            <span class="doc-flag-badge badge-warn">1.178 · p.89</span>
+                        </div>
+
+                        <!-- Normal rows -->
+                        <div class="doc-data-row">
+                            <div class="doc-line-placeholder" style="width:68%;"></div>
+                            <span class="doc-figure">RMB 266,000M</span>
+                        </div>
+                        <div class="doc-data-row">
+                            <div class="doc-line-placeholder" style="width:55%;"></div>
+                            <span class="doc-figure">RMB 8,379M</span>
+                        </div>
+
+                        <!-- FLAGGED: Related Party — RED -->
+                        <div class="doc-data-row doc-flagged doc-flagged-red">
+                            <span class="doc-flag-text">✖ Related Party Bailout</span>
+                            <span class="doc-flag-badge badge-danger">RED FLAG · p.247</span>
+                        </div>
+
+                        <!-- Footnotes block -->
+                        <div class="doc-footnote-section">
+                            <div class="doc-fn-line" style="width:88%;"></div>
+                            <div class="doc-fn-line" style="width:74%;"></div>
+                            <div class="doc-fn-line" style="width:62%;"></div>
+                        </div>
+
+                        <!-- SCAN BEAM — single white scanner -->
+                        <div class="scan-beam scan-beam-white"></div>
                     </div>
-                    <div class="terminal-line t-fade-2">
-                        <span class="t-system">◆</span>
-                        <span class="t-info">Retrieving EN + ZH filings from HKEX...</span>
+
+                    <!-- Status bar -->
+                    <div class="scan-status-bar">
+                        <span class="status-indicator"></span>
+                        <span class="status-text">9 agents · 287 pages · 7 flags raised</span>
+                        <span class="status-verdict verdict-high">HIGH RISK</span>
                     </div>
-                    <div class="terminal-line t-fade-3">
-                        <span class="t-system">◆</span>
-                        <span class="t-info">Running Beneish M-Score decomposition...</span>
-                    </div>
-                    <div class="terminal-line t-fade-4">
-                        <span class="t-warn">▲</span>
-                        <span class="t-warning">M-Score: -1.85 — GRAY AREA (above -2.22 safe zone)</span>
-                    </div>
-                    <div class="terminal-line t-fade-5">
-                        <span class="t-system">◆</span>
-                        <span class="t-info">Bilingual asymmetry scan: 10 categories...</span>
-                    </div>
-                    <div class="terminal-line t-fade-6">
-                        <span class="t-alert">✖</span>
-                        <span class="t-danger">RED FLAG: Going Concern disclosure — RMB 266B in unused loan assumptions</span>
-                    </div>
-                    <div class="terminal-line t-fade-7">
-                        <span class="t-system">◆</span>
-                        <span class="t-info">Footnote tracker: 5 critical findings detected...</span>
-                    </div>
-                    <div class="terminal-line t-fade-8">
-                        <span class="t-gold">★</span>
-                        <span class="t-verdict">VERDICT: HIGH RISK — 7 forensic flags raised</span>
-                    </div>
-                    <div class="terminal-cursor"></div>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- ═══════════════════════════════════════════ -->
     <!-- THE ANALYSIS PANEL — Proof First            -->
