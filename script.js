@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initParticles();
     initMobileMenu();
     initSmoothScroll();
+    initAccessForm();
 });
 
 /* ─── Navigation Scroll Effect ─── */
@@ -56,8 +57,8 @@ function initScrollReveal() {
             });
         },
         {
-            threshold: 0.1,
-            rootMargin: '0px 0px -60px 0px',
+            threshold: 0.08,
+            rootMargin: '0px 0px -20px 0px',
         }
     );
 
@@ -175,7 +176,7 @@ function initMobileMenu() {
                 top: 72px;
                 left: 0;
                 right: 0;
-                background: rgba(31, 36, 84, 0.98);
+                background: rgba(4, 8, 22, 0.98);
                 border-bottom: 1px solid #1A2332;
                 padding: 20px 24px;
                 gap: 16px;
@@ -225,5 +226,101 @@ function initSmoothScroll() {
                 if (toggle) toggle.classList.remove('active');
             }
         });
+    });
+}
+/* ─── Access Form Submission ─── */
+function initAccessForm() {
+    const form = document.getElementById('access-form');
+    if (!form) return;
+
+    const submitBtn = document.getElementById('form-submit-btn');
+    const btnText = document.getElementById('form-btn-text');
+    const btnArrow = document.getElementById('form-btn-arrow');
+    const btnSpinner = document.getElementById('form-btn-spinner');
+    const successEl = document.getElementById('form-success');
+    const errorEl = document.getElementById('form-error');
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        // Validate
+        const name = document.getElementById('form-name').value.trim();
+        const email = document.getElementById('form-email').value.trim();
+        const fund = document.getElementById('form-fund').value.trim();
+
+        const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+        if (!name || !email || !emailValid || !fund) {
+            // Highlight empty or invalid fields
+            [{ id: 'form-name', valid: !!name }, { id: 'form-email', valid: !!email && emailValid }, { id: 'form-fund', valid: !!fund }].forEach(f => {
+                const el = document.getElementById(f.id);
+                if (!f.valid) {
+                    el.style.borderColor = 'rgba(239, 68, 68, 0.5)';
+                    el.addEventListener('input', () => el.style.borderColor = '', { once: true });
+                }
+            });
+            return;
+        }
+
+        // Loading state
+        submitBtn.disabled = true;
+        btnText.textContent = 'Submitting...';
+        btnArrow.style.display = 'none';
+        btnSpinner.style.display = 'block';
+        successEl.style.display = 'none';
+        errorEl.style.display = 'none';
+
+        try {
+            // Submit to Formspree
+            const response = await fetch("https://formspree.io/f/xlgoneyn", {
+                method: "POST",
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                // Dynamic success messaging based on exact intent
+                const intent = document.getElementById('form-use').value;
+                const titleEl = document.getElementById('form-success-title');
+                const descEl = document.getElementById('form-success-desc');
+
+                if (titleEl && descEl) {
+                    switch(intent) {
+                        case 'custom_ticker':
+                            titleEl.textContent = 'Request received.';
+                            descEl.textContent = 'Our intelligence team will contact you shortly to scope your target ticker.';
+                            break;
+                        case 'strategic_partnership':
+                            titleEl.textContent = 'Inquiry received.';
+                            descEl.textContent = 'A founding partner will reach out directly to discuss capital logistics.';
+                            break;
+                        case 'enterprise_api':
+                            titleEl.textContent = 'Request received.';
+                            descEl.textContent = "We'll be in touch shortly to provide API documentation and technical scoping requirements.";
+                            break;
+                        default:
+                            titleEl.textContent = 'Waitlist secured.';
+                            descEl.textContent = 'We will be in touch shortly to schedule an institutional terminal walkthrough.';
+                            break;
+                    }
+                }
+
+                Array.from(form.children).forEach(child => {
+                    if (child !== successEl && child !== errorEl) child.style.display = 'none';
+                });
+                successEl.style.display = 'flex';
+            } else {
+                throw new Error('Form submission failed');
+            }
+        } catch (error) {
+            console.error("Submission Error:", error);
+            submitBtn.disabled = false;
+            btnText.textContent = 'Request Access';
+            btnArrow.style.display = 'block';
+            btnSpinner.style.display = 'none';
+            errorEl.style.display = 'block';
+        }
     });
 }

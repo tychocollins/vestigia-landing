@@ -18,7 +18,7 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="trail.png" />
 
-    <title>Vestigia Labs</title>
+    <title>Vestigia Labs — Forensic Intelligence Platform for Chinese Equities</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,6 +43,7 @@
                 <a href="#architecture" class="nav-link">Architecture</a>
                 <a href="#exchange-section" class="nav-link">Coverage</a>
                 <a href="#team" class="nav-link">Team</a>
+                <a href="#access" class="nav-link">Contact</a>
             </div>
             <div class="nav-actions">
                 <a href="#analysis" class="btn btn-ghost" id="nav-demo-btn">View Demo</a>
@@ -91,94 +92,170 @@
                         <span>Explore Capabilities</span>
                     </a>
                 </div>
+
+                <div class="hero-metrics" id="hero-metrics">
+                    <div class="metric">
+                        <span class="metric-value">95<span style="color:#D4A843">+</span></span>
+                        <span class="metric-label">HKEX Equities</span>
+                    </div>
+                    <div class="metric-divider"></div>
+                    <div class="metric">
+                        <span class="metric-value">9</span>
+                        <span class="metric-label">Agentic Swarm</span>
+                    </div>
+                    <div class="metric-divider"></div>
+                    <div class="metric">
+                        <span class="metric-value">6<span style="color:#D4A843; font-size:1.4rem">mo</span></span>
+                        <span class="metric-label">Lead Time</span>
+                    </div>
+                </div>
             </div>
 
-            <!-- RIGHT: Document Scan Visualization -->
+            <!-- RIGHT: Deconstruction Split-Screen -->
             <div class="hero-workflow" id="hero-terminal-preview">
-                <div class="workflow-panel">
-                    <div class="workflow-panel-header">
-                        <span class="workflow-label-side">FORENSIC ENGINE</span>
-                        <span class="workflow-title-center">LIVE ASYMMETRY ANALYSIS</span>
-                        <span class="workflow-label-side">2007.HK · FY2022</span>
+                <div class="deconstruct-wrap">
+
+                    <!-- STEP 1: THE MESS — Raw Chinese PDF -->
+                    <div class="decon-panel decon-source">
+                        <div class="decon-label">
+                            <span class="decon-step">01</span>
+                            <span>Raw Filing</span>
+                        </div>
+                        <div class="decon-source-doc">
+                            <div class="raw-doc-header">
+                                <div class="raw-doc-logo">碧桂园</div>
+                                <div class="raw-doc-meta">
+                                    <div class="raw-meta-line" style="width:70%"></div>
+                                    <div class="raw-meta-line" style="width:50%"></div>
+                                </div>
+                            </div>
+                            <div class="raw-doc-body">
+                                <!-- Dense Chinese text rows -->
+                                <div class="raw-text-block">
+                                    <span class="zh">根据本集团财务报告，截至2022年12月31日</span>
+                                </div>
+                                <div class="raw-text-block">
+                                    <span class="zh">合并资产负债表显示流动负债合计人民币</span>
+                                </div>
+                                <div class="raw-text-row">
+                                    <div class="raw-trow" style="width:80%"></div>
+                                    <div class="raw-trow" style="width:60%"></div>
+                                    <div class="raw-trow" style="width:90%"></div>
+                                    <div class="raw-trow" style="width:55%"></div>
+                                </div>
+                                <div class="raw-table">
+                                    <div class="raw-table-row">
+                                        <div class="raw-tcell zh-sm">流动资产</div>
+                                        <div class="raw-tcell-num">89,420</div>
+                                    </div>
+                                    <div class="raw-table-row raw-table-highlight">
+                                        <div class="raw-tcell zh-sm">持续经营不确定性</div>
+                                        <div class="raw-tcell-num warn">147,550</div>
+                                    </div>
+                                    <div class="raw-table-row">
+                                        <div class="raw-tcell zh-sm">关联方交易</div>
+                                        <div class="raw-tcell-num">23,000</div>
+                                    </div>
+                                </div>
+                                <div class="raw-text-block small-zh">
+                                    <span class="zh">注：本集团于报告期内发现</span>
+                                </div>
+                                <div class="raw-text-row">
+                                    <div class="raw-trow" style="width:75%"></div>
+                                    <div class="raw-trow" style="width:85%"></div>
+                                </div>
+                            </div>
+                            <div class="raw-doc-footer">
+                                <span>HKEX Filing · 2007.HK · FY2022 · p.135/287</span>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="scan-document" id="scan-doc">
-
-                        <!-- Document title block -->
-                        <div class="doc-title-row">
-                            <span class="doc-company">Country Garden Holdings Co., Ltd.</span>
-                            <span class="doc-page-ref">Annual Report FY2022</span>
+                    <!-- STEP 2: THE PROCESS — AI Scanning -->
+                    <div class="decon-panel decon-process">
+                        <div class="decon-label">
+                            <span class="decon-step">02</span>
+                            <span>AI Forensics</span>
                         </div>
-
-                        <!-- Normal rows -->
-                        <div class="doc-data-row">
-                            <div class="doc-line-placeholder" style="width:60%;"></div>
-                            <span class="doc-figure">RMB 89,420M</span>
+                        <div class="decon-engine">
+                            <div class="engine-core">
+                                <div class="engine-ring engine-ring-1"></div>
+                                <div class="engine-ring engine-ring-2"></div>
+                                <div class="engine-ring engine-ring-3"></div>
+                                <div class="engine-center">
+                                    <span class="engine-icon">⬡</span>
+                                </div>
+                            </div>
+                            <div class="engine-agents">
+                                <div class="agent-pill">
+                                    <span class="agent-dot dot-green"></span>
+                                    <span>Translator</span>
+                                </div>
+                                <div class="agent-pill">
+                                    <span class="agent-dot dot-teal"></span>
+                                    <span>Beneish M</span>
+                                </div>
+                                <div class="agent-pill">
+                                    <span class="agent-dot dot-gold"></span>
+                                    <span>DSRI Model</span>
+                                </div>
+                                <div class="agent-pill">
+                                    <span class="agent-dot dot-red"></span>
+                                    <span>Risk Scorer</span>
+                                </div>
+                            </div>
+                            <div class="engine-status">
+                                <div class="engine-progress-bar">
+                                    <div class="engine-progress-fill"></div>
+                                </div>
+                                <span class="engine-status-text">9 agents · 287 pages</span>
+                            </div>
                         </div>
-                        <div class="doc-data-row">
-                            <div class="doc-line-placeholder" style="width:72%;"></div>
-                            <span class="doc-figure">RMB 147,550M</span>
-                        </div>
-                        <div class="doc-data-row">
-                            <div class="doc-line-placeholder" style="width:50%;"></div>
-                            <span class="doc-figure">RMB 6,052M</span>
-                        </div>
-
-                        <!-- FLAGGED: Going Concern — RED -->
-                        <div class="doc-data-row doc-flagged doc-flagged-red">
-                            <span class="doc-flag-text">⚠ Going Concern Disclosure</span>
-                            <span class="doc-flag-badge badge-danger">RED FLAG · p.137</span>
-                        </div>
-
-                        <!-- Normal rows -->
-                        <div class="doc-data-row">
-                            <div class="doc-line-placeholder" style="width:65%;"></div>
-                            <span class="doc-figure">RMB 23,000M</span>
-                        </div>
-                        <div class="doc-data-row">
-                            <div class="doc-line-placeholder" style="width:48%;"></div>
-                            <span class="doc-figure">HKD 5,055M</span>
-                        </div>
-
-                        <!-- FLAGGED: DSRI Anomaly — YELLOW -->
-                        <div class="doc-data-row doc-flagged doc-flagged-warn">
-                            <span class="doc-flag-text">▲ DSRI Anomaly Detected</span>
-                            <span class="doc-flag-badge badge-warn">1.178 · p.89</span>
-                        </div>
-
-                        <!-- Normal rows -->
-                        <div class="doc-data-row">
-                            <div class="doc-line-placeholder" style="width:68%;"></div>
-                            <span class="doc-figure">RMB 266,000M</span>
-                        </div>
-                        <div class="doc-data-row">
-                            <div class="doc-line-placeholder" style="width:55%;"></div>
-                            <span class="doc-figure">RMB 8,379M</span>
-                        </div>
-
-                        <!-- FLAGGED: Related Party — RED -->
-                        <div class="doc-data-row doc-flagged doc-flagged-red">
-                            <span class="doc-flag-text">✖ Related Party Bailout</span>
-                            <span class="doc-flag-badge badge-danger">RED FLAG · p.247</span>
-                        </div>
-
-                        <!-- Footnotes block -->
-                        <div class="doc-footnote-section">
-                            <div class="doc-fn-line" style="width:88%;"></div>
-                            <div class="doc-fn-line" style="width:74%;"></div>
-                            <div class="doc-fn-line" style="width:62%;"></div>
-                        </div>
-
-                        <!-- SCAN BEAM — single white scanner -->
-                        <div class="scan-beam scan-beam-white"></div>
                     </div>
 
-                    <!-- Status bar -->
-                    <div class="scan-status-bar">
-                        <span class="status-indicator"></span>
-                        <span class="status-text">9 agents · 287 pages · 7 flags raised</span>
-                        <span class="status-verdict verdict-high">HIGH RISK</span>
+                    <!-- STEP 3: THE INTELLIGENCE — Clean Risk Output -->
+                    <div class="decon-panel decon-output">
+                        <div class="decon-label">
+                            <span class="decon-step">03</span>
+                            <span>Intelligence</span>
+                        </div>
+                        <div class="decon-result">
+                            <div class="result-verdict">
+                                <span class="verdict-badge">HIGH RISK</span>
+                                <span class="verdict-ticker">2007.HK</span>
+                            </div>
+                            <div class="result-flags">
+                                <div class="result-flag flag-red">
+                                    <span class="flag-icon">⚠</span>
+                                    <div class="flag-body">
+                                        <span class="flag-title">Going Concern</span>
+                                        <span class="flag-sub">p.135 · Translated from 持续经营</span>
+                                    </div>
+                                    <span class="flag-severity">CRITICAL</span>
+                                </div>
+                                <div class="result-flag flag-amber">
+                                    <span class="flag-icon">▲</span>
+                                    <div class="flag-body">
+                                        <span class="flag-title">DSRI Anomaly</span>
+                                        <span class="flag-sub">Score 1.178 · Threshold 1.031</span>
+                                    </div>
+                                    <span class="flag-severity flag-amber-txt">1.178</span>
+                                </div>
+                                <div class="result-flag flag-red">
+                                    <span class="flag-icon">✖</span>
+                                    <div class="flag-body">
+                                        <span class="flag-title">Related Party Bailout</span>
+                                        <span class="flag-sub">p.245 · RMB 23,000M exposure</span>
+                                    </div>
+                                    <span class="flag-severity">CRITICAL</span>
+                                </div>
+                            </div>
+                            <div class="result-footer">
+                                <span class="result-delta">⬆ 6 months before public default</span>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -196,7 +273,7 @@
                     See the Default Before the Market Does.
                 </h2>
                 <p class="section-subtitle" id="analysis-subtitle">
-                    Backtested against Country Garden (2007.HK) — HIGH RISK signal generated March 2023. <strong>$11B default confirmed October 2023.</strong> Six month lead time.
+                    Backtested against the Country Garden (2007.HK) 2022 Annual Report. Our engine generated a <strong>HIGH RISK</strong> signal six months before the <strong>$11B default</strong>.
                 </p>
             </div>
 
@@ -230,7 +307,7 @@
                             <div class="summary-sections">
                                 <div class="summary-block summary-block-danger">
                                     <div class="summary-block-title">Liquidity & Going Concern Risks</div>
-                                    <p class="panel-text"><strong>RED FLAG — GOING CONCERN DISCLOSURE:</strong> Management included a specific "Going Concern" assessment relying on <strong>RMB 266 billion</strong> in "unused loan facilities" and <strong>RMB 20 billion</strong> in new medium-term note quotas to survive the next 12 months [Page 137]. <strong>RED FLAG — RELATED PARTY BAILOUT:</strong> Controlling shareholder provided an interest-free, unsecured loan of <strong>HKD 5.055 billion</strong> (~RMB 4,500 million) with a 37-month maturity [Page 247].</p>
+                                    <p class="panel-text"><strong>RED FLAG — GOING CONCERN DISCLOSURE:</strong> Management included a specific "Going Concern" assessment relying on <strong>RMB 266 billion</strong> in "unused loan facilities" and <strong>RMB 20 billion</strong> in new medium-term note quotas to survive the next 12 months [Page 135]. <strong>RED FLAG — RELATED PARTY BAILOUT:</strong> Controlling shareholder provided an interest-free, unsecured loan of <strong>HKD 5.055 billion</strong> (~RMB 4,500 million) with a 37-month maturity [Page 245].</p>
                                 </div>
                             </div>
 
@@ -241,7 +318,7 @@
                                 </div>
                                 <div class="desk-row">
                                     <span class="desk-label">Key Metric:</span>
-                                    <span>Net loss of <strong>RMB 6,052 million</strong> and emergency controlling shareholder loan of <strong>RMB 4,500 million</strong> [Pages 36, 247].</span>
+                                    <span>Net loss of <strong>RMB 6,052 million</strong> and emergency controlling shareholder loan of <strong>RMB 4,500 million</strong> [Pages 34, 245].</span>
                                 </div>
                                 <div class="desk-row">
                                     <span class="desk-label">Audit Flags:</span>
@@ -255,9 +332,9 @@
 
                             <div class="panel-citations">
                                 <span class="citation">Annual Report FY2022 p.34–39</span>
-                                <span class="citation">Annual Report FY2022 p.137</span>
+                                <span class="citation">Annual Report FY2022 p.135</span>
                                 <span class="citation">Annual Report FY2022 p.180–182</span>
-                                <span class="citation">Annual Report FY2022 p.247</span>
+                                <span class="citation">Annual Report FY2022 p.245</span>
                             </div>
                         </div>
                     </div>
@@ -325,17 +402,81 @@
                         </div>
                     </div>
 
-                    <!-- ASYMMETRY TAB — Country Garden: No Discrepancies -->
+                    <!-- ASYMMETRY TAB — Country Garden: Bilingual Scan Result -->
                     <div class="showcase-panel" id="panel-asymmetry">
-                        <div class="panel-callout panel-callout-safe" style="margin-top: 0; margin-bottom: 24px; font-size: 0.9rem; font-weight: 600;">
-                            ✅ NO DISCREPANCIES DETECTED — EN and ZH filings are aligned
+
+                        <!-- Verdict header -->
+                        <div class="panel-verdict">
+                            <div class="verdict-badge" style="background: rgba(16,185,129,0.1); color: #10B981; border: 1px solid rgba(16,185,129,0.2);">BILINGUAL ALIGNMENT CONFIRMED</div>
+                            <div class="verdict-ticker">2007.HK — Country Garden Holdings</div>
                         </div>
-                        <div style="text-align: center; padding: 32px 20px;">
-                            <div style="font-size: 3rem; margin-bottom: 12px;">✅</div>
-                            <h3 style="color: #fff; font-size: 1.3rem; font-weight: 700; margin-bottom: 10px;">Bilingual Alignment Confirmed</h3>
-                            <p style="color: #6A7490; font-size: 0.95rem; max-width: 520px; margin: 0 auto; line-height: 1.6;">The English and Chinese filings contain consistent disclosures, risk language, and financial figures. No material translation gaps detected.</p>
+
+                        <!-- Scan summary bar -->
+                        <div style="background: rgba(16,185,129,0.04); border: 1px solid rgba(16,185,129,0.12); border-radius: 12px; padding: 16px 22px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+                            <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: #6EE7B7;">
+                                ✓ 287-page EN/ZH cross-examination complete
+                            </div>
+                            <div style="display: flex; gap: 20px; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #52525B;">
+                                <span>Passages Checked: <strong style="color: #D1D5DB;">148</strong></span>
+                                <span>Risk Terms Flagged: <strong style="color: #D1D5DB;">0</strong></span>
+                                <span>Delta Threshold: <strong style="color: #D1D5DB;">&gt;15%</strong></span>
+                            </div>
+                        </div>
+
+                        <!-- Key passages table -->
+                        <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px;">
+
+                            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr auto; gap: 12px; padding: 12px 18px; background: rgba(0,0,0,0.15); border: 1px solid rgba(255,255,255,0.04); border-radius: 8px; align-items: center; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #52525B; letter-spacing: 0.06em;">
+                                <span>PASSAGE / RISK CATEGORY</span>
+                                <span>ZH PAGE</span>
+                                <span>EN PAGE</span>
+                                <span>STATUS</span>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr auto; gap: 12px; padding: 13px 18px; background: rgba(0,0,0,0.12); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; align-items: center;">
+                                <span style="font-size: 0.85rem; color: #D1D5DB;">持续经营风险 — Going Concern Disclosure</span>
+                                <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: #52525B;">p.135</span>
+                                <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: #52525B;">p.135</span>
+                                <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; font-weight: 700; color: #10B981;">✓ MATCH</span>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr auto; gap: 12px; padding: 13px 18px; background: rgba(0,0,0,0.12); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; align-items: center;">
+                                <span style="font-size: 0.85rem; color: #D1D5DB;">关联方贷款 — Related Party Loan Terms</span>
+                                <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: #52525B;">p.245</span>
+                                <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: #52525B;">p.245</span>
+                                <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; font-weight: 700; color: #10B981;">✓ MATCH</span>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr auto; gap: 12px; padding: 13px 18px; background: rgba(0,0,0,0.12); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; align-items: center;">
+                                <span style="font-size: 0.85rem; color: #D1D5DB;">银行融资安排 — Bank Facility Disclosures</span>
+                                <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: #52525B;">p.34</span>
+                                <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: #52525B;">p.34</span>
+                                <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; font-weight: 700; color: #10B981;">✓ MATCH</span>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr auto; gap: 12px; padding: 13px 18px; background: rgba(0,0,0,0.12); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; align-items: center;">
+                                <span style="font-size: 0.85rem; color: #D1D5DB;">存货减值准备 — Inventory Write-Down Figures</span>
+                                <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: #52525B;">p.180</span>
+                                <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: #52525B;">p.180</span>
+                                <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; font-weight: 700; color: #10B981;">✓ MATCH</span>
+                            </div>
+
+                        </div>
+
+                        <!-- Interpretation callout -->
+                        <div class="panel-callout panel-callout-safe">
+                            Translation layer confirmed transparent. The risk in this filing is in the numbers — not the language. EN-only investors received full disclosure. Forensic investigation escalated to quantitative and structural analysis.
+                        </div>
+
+                        <!-- Citations -->
+                        <div class="panel-citations" style="margin-top: 16px;">
+                            <span class="citation">Annual Report FY2022 p.34</span>
+                            <span class="citation">Annual Report FY2022 p.135</span>
+                            <span class="citation">Annual Report FY2022 p.180</span>
+                            <span class="citation">Annual Report FY2022 p.245</span>
                         </div>
                     </div>
+
 
                     <!-- INTEGRITY TAB — Country Garden: Cross-Checks -->
                     <div class="showcase-panel" id="panel-integrity">
@@ -404,12 +545,12 @@
                             <div class="footnote-item">
                                 <span class="fn-severity fn-high">HIGH</span>
                                 <span class="fn-text">Going Concern disclosure — management assumes RMB 266B in "unused loan facilities" to survive next 12 months</span>
-                                <span class="fn-link">p.137 →</span>
+                                <span class="fn-link">p.135 →</span>
                             </div>
                             <div class="footnote-item">
                                 <span class="fn-severity fn-high">HIGH</span>
                                 <span class="fn-text">Related party bailout — controlling shareholder injected interest-free unsecured HKD 5.055B loan (37-month maturity)</span>
-                                <span class="fn-link">p.247 →</span>
+                                <span class="fn-link">p.245 →</span>
                             </div>
                             <div class="footnote-item">
                                 <span class="fn-severity fn-high">HIGH</span>
@@ -522,7 +663,7 @@
             <div class="pipeline-grid">
                 <div class="pipeline-card">
                     <div class="pipeline-card-img-wrapper">
-                        <img src="Workflow.png" alt="Agentic Workflow diagram" class="pipeline-card-img">
+                        <img src="Workflow.png" alt="Agentic Workflow diagram" class="pipeline-card-img" id="workflow-img">
                     </div>
                     <span class="pipeline-step">01</span>
                     <h3>Agentic Workflow</h3>
@@ -536,7 +677,7 @@
                 </div>
                 <div class="pipeline-card">
                     <div class="pipeline-card-img-wrapper">
-                        <img src="Swarm.png" alt="AI Swarm diagram" class="pipeline-card-img" id="swarm-img">
+                        <img src="Swarm.png" alt="AI Swarm network diagram" class="pipeline-card-img" id="swarm-img">
                     </div>
                     <span class="pipeline-step">02</span>
                     <h3>AI Swarm</h3>
@@ -567,7 +708,8 @@
     <section class="exchange-section" id="exchange-section">
         <div class="container">
             <div class="exc-hero">
-                <h2 class="exc-title">Exchange Coverage</h2>
+                <span class="section-tag" style="margin-bottom: 24px;">Coverage</span>
+                <h2 class="exc-title">Chinese Exchange Coverage</h2>
                 <p class="exc-desc">
                     Deploying agentic intelligence across primary Chinese and Hong Kong equity markets.
                 </p>
@@ -702,18 +844,56 @@
                 </div>
                 <h2 class="cta-title" id="cta-title">Ready to See What Others Miss?</h2>
                 <p class="cta-subtitle" id="cta-subtitle">
-                    Request early access to the Vestigia Labs institutional terminal. 
-                    Currently supporting HKEX-listed entities with bilingual EN/ZH coverage.
+                    Request early access to the Vestigia Labs institutional terminal.
+                    Spots are limited — currently supporting HKEX-listed entities with bilingual EN/ZH coverage.
                 </p>
-                <div class="cta-actions">
-                    <a href="mailto:access@vestigialabs.com" class="btn btn-primary btn-lg" id="cta-email-btn">
-                        <span>Request Access</span>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+
+                <!-- Institutional Waitlist Form -->
+                <form class="access-form" id="access-form" novalidate>
+                    <div class="form-group">
+                        <label class="form-label" for="form-name">Full Name</label>
+                        <input type="text" id="form-name" name="name" class="form-input" placeholder="Jane Smith" autocomplete="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="form-email">Work Email</label>
+                        <input type="email" id="form-email" name="email" class="form-input" placeholder="jane@fund.com" autocomplete="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="form-fund">Fund / Institution</label>
+                        <input type="text" id="form-fund" name="fund" class="form-input" placeholder="Citadel, Bridgewater, Tiger Global..." required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="form-use">Primary Use Case</label>
+                        <select id="form-use" name="use_case" class="form-input form-select">
+                            <option value="" disabled selected>Select intent...</option>
+                            <option value="early_access">Request Early Terminal Access</option>
+                            <option value="custom_ticker">Commission Custom Ticker Analysis</option>
+                            <option value="strategic_partnership">Strategic Partnership / Investment</option>
+                            <option value="enterprise_api">Enterprise / API Integration</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg form-submit" id="form-submit-btn">
+                        <span id="form-btn-text">Request Access</span>
+                        <svg id="form-btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M5 12h14M12 5l7 7-7 7"/>
                         </svg>
-                    </a>
-                </div>
-                <div class="cta-note">
+                        <svg id="form-btn-spinner" class="form-spinner" style="display:none" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                        </svg>
+                    </button>
+                    <div class="form-success" id="form-success" style="display:none">
+                        <span class="form-success-icon">✓</span>
+                        <div>
+                            <strong id="form-success-title">Waitlist secured.</strong>
+                            <p id="form-success-desc">We will be in touch shortly to schedule an institutional terminal walkthrough.</p>
+                        </div>
+                    </div>
+                    <div class="form-error" id="form-error" style="display:none">
+                        <span>⚠ Something went wrong. Email us directly at <a href="mailto:info@vestigialabs.com">info@vestigialabs.com</a></span>
+                    </div>
+                </form>
+
+                <div class="cta-note" style="margin-top: 24px;">
                     <span class="cta-note-icon">◆</span>
                     <span>HKEX coverage · Bilingual EN/ZH · Institutional-grade forensics</span>
                 </div>
@@ -733,20 +913,7 @@
                     </div>
                     <p class="footer-desc">Institutional intelligence platform for forensic-grade financial analysis of China and Hong Kong equity markets.</p>
                 </div>
-                <div class="footer-links">
-                    <div class="footer-col">
-                        <h4>Platform</h4>
-                        <a href="#analysis">Analysis</a>
-                        <a href="#capabilities">Engine</a>
-                        <a href="#exchange-section">Coverage</a>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Resources</h4>
-                        <a href="#">Documentation</a>
-                        <a href="#">API Reference</a>
-                        <a href="#">Methodology</a>
-                    </div>
-                </div>
+
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Vestigia Labs. All rights reserved.</p>
