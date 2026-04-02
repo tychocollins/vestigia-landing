@@ -282,7 +282,7 @@ code {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 108px 48px 56px;
+    padding: 108px 24px 56px;
     overflow: hidden;
 }
 
@@ -362,6 +362,8 @@ code {
     justify-content: center;
     align-self: center;
     padding-left: 32px;
+    min-width: 0;
+    overflow: hidden;
 }
 
 /* ── Hero Workflow Diagram — vertical centering fix —– */
@@ -3657,6 +3659,33 @@ code {
     }
 
     /* ─── HERO ─── */
+    .hero {
+        padding: 90px 16px 48px;
+        min-height: auto;
+        align-items: flex-start;
+    }
+
+    .hero-two-col {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .hero-content {
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+    }
+
+    .hero-subtitle {
+        max-width: 100%;
+        font-size: 1rem;
+    }
+
+    /* Hide the hero workflow diagram on mobile — it overflows */
+    .hero-workflow {
+        display: none;
+    }
+
     .hero-title {
         font-size: clamp(1.9rem, 7vw, 2.4rem);
     }
@@ -3664,6 +3693,7 @@ code {
     .hero-actions {
         flex-direction: column;
         align-items: stretch;
+        width: 100%;
     }
 
     .hero-actions .btn {
