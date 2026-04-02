@@ -30,6 +30,7 @@ html {
     background-color: #08102B;
     font-size: 16px;
     scroll-padding-top: 80px;
+    overflow-x: hidden;
 }
 
 body {
@@ -3681,12 +3682,12 @@ code {
         font-size: 1rem;
     }
 
-    /* Hero workflow diagram — scale to fit, no scroll needed */
+    /* Hero workflow diagram — scaled to fit, clipped within explicit height */
     .hero-workflow {
         display: block;
         width: 100%;
-        overflow: visible;
-        padding-bottom: 0;
+        overflow: hidden;
+        height: 178px; /* 340px * 0.52 = 177px */
     }
 
     .hero-workflow .deconstruct-wrap {
@@ -3694,7 +3695,7 @@ code {
         min-width: unset;
         transform: scale(0.52);
         transform-origin: top left;
-        margin-bottom: -163px; /* compensate for scale: 340*(1-0.52) */
+        margin-bottom: 0;
     }
 
     .hero-title {
