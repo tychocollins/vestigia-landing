@@ -3681,17 +3681,20 @@ code {
         font-size: 1rem;
     }
 
-    /* Hero workflow diagram — scrollable on mobile, never hidden */
+    /* Hero workflow diagram — scale to fit, no scroll needed */
     .hero-workflow {
         display: block;
         width: 100%;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        padding-bottom: 8px;
+        overflow: visible;
+        padding-bottom: 0;
     }
 
     .hero-workflow .deconstruct-wrap {
-        min-width: 680px;
+        width: 680px;
+        min-width: unset;
+        transform: scale(0.52);
+        transform-origin: top left;
+        margin-bottom: -163px; /* compensate for scale: 340*(1-0.52) */
     }
 
     .hero-title {
