@@ -6,10 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavScroll();
     initScrollReveal();
     initTabSwitcher();
+    initMegaTabs();
     initParticles();
     initMobileMenu();
     initSmoothScroll();
     initAccessForm();
+    initBriefsModal();
 });
 
 /* ─── Navigation Scroll Effect ─── */
@@ -65,10 +67,13 @@ function initScrollReveal() {
     revealElements.forEach(el => observer.observe(el));
 }
 
-/* ─── Terminal Showcase Tab Switcher ─── */
+/* ─── Terminal Showcase Tab Switcher (scoped to Country Garden) ─── */
 function initTabSwitcher() {
-    const tabs = document.querySelectorAll('.showcase-tab');
-    const panels = document.querySelectorAll('.showcase-panel');
+    const showcase = document.getElementById('terminal-showcase');
+    if (!showcase) return;
+
+    const tabs = showcase.querySelectorAll('.showcase-tab');
+    const panels = showcase.querySelectorAll('.showcase-panel');
 
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
@@ -95,6 +100,104 @@ function initTabSwitcher() {
             pill.classList.add('active');
         });
     });
+}
+
+/* ─── Mega-Tabs Toggle ─── */
+function initMegaTabs() {
+    const megaTabs = document.querySelectorAll('.mega-tab');
+    const megaPanels = document.querySelectorAll('.mega-panel');
+
+    if (!megaTabs.length) return;
+
+    megaTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const target = tab.dataset.mega;
+
+            megaTabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+
+            megaPanels.forEach(p => p.classList.remove('active'));
+            const targetPanel = document.getElementById(`mega-${target}`);
+            if (targetPanel) {
+                targetPanel.classList.add('active');
+            }
+        });
+    });
+}
+
+/* ─── Briefs Email Gate Modal ─── */
+function initBriefsModal() {
+    const overlay = document.getElementById('brief-modal-overlay');
+    const closeBtn = document.getElementById('brief-modal-close');
+    const form = document.getElementById('brief-modal-form');
+    const formState = document.getElementById('brief-modal-form-state');
+    const successState = document.getElementById('brief-modal-success-state');
+    const reportInput = document.getElementById('brief-modal-report');
+    const downloadLink = document.getElementById('brief-modal-download-link');
+    const emailInput = document.getElementById('brief-modal-email');
+    const submitBtn = document.getElementById('brief-modal-submit');
+    const btnText = document.getElementById('brief-modal-btn-text');
+
+    if (!overlay) return;
+
+    // Open modal on brief download button click
+    document.querySelectorAll('.brief-download-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const report = btn.dataset.report;
+            reportInput.value = report;
+            // Reset modal state
+            formState.style.display = 'block';
+            successState.style.display = 'none';
+            emailInput.value = '';
+            if (submitBtn) submitBtn.disabled = false;
+            if (btnText) btnText.textContent = 'Unlock Brief';
+            overlay.classList.add('active');
+        });
+    });
+
+    // Close modal
+    const closeModal = () => overlay.classList.remove('active');
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) closeModal();
+    });
+
+    // Form submission
+    if (form) {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = emailInput.value.trim();
+            if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                emailInput.style.borderColor = 'rgba(239, 68, 68, 0.5)';
+                return;
+            }
+
+            submitBtn.disabled = true;
+            btnText.textContent = 'Verifying...';
+
+            try {
+                const response = await fetch('https://formspree.io/f/xlgoneyn', {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    // Show success state with direct download
+                    const reportFile = reportInput.value;
+                    downloadLink.href = '/briefs/' + reportFile;
+                    formState.style.display = 'none';
+                    successState.style.display = 'block';
+                } else {
+                    throw new Error('Submission failed');
+                }
+            } catch (err) {
+                submitBtn.disabled = false;
+                btnText.textContent = 'Unlock Brief';
+                emailInput.style.borderColor = 'rgba(239, 68, 68, 0.5)';
+            }
+        });
+    }
 }
 
 /* ─── Floating Particles ─── */
