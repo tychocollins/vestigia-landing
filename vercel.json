@@ -1,4 +1,5 @@
 {
+  "trailingSlash": true,
   "rewrites": [
     { "source": "/briefs", "destination": "/briefs/index.html" },
     { "source": "/reports", "destination": "/reports/index.html" }
